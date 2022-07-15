@@ -1,4 +1,4 @@
-FROM nickblah/lua:latest
+FROM nickblah/lua:5.2
 
 RUN apt-get update -y \
  && apt-get upgrade -y \
