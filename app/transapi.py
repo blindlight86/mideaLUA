@@ -40,10 +40,10 @@ def luatrans(data):
     result = subprocess.check_output(['lua', '-l', 'bit32', '-l', devicelua, '/app/transcode.lua', dirction, jstring])
     if dirction == 'J2C':
         print(f'raw data: {result.decode()}')
-        print(f'cmd data: {result.decode()[:-5]}')
+        print(f'cmd data: {result.decode()[:-3]}')
         resp = {
             "raw data": result.decode()[:-1],
-            "cmd data": result.decode()[:-5]
+            "cmd data": result.decode()[:-3]
         }
         return json.dumps(resp)
     elif dirction =='C2J':
