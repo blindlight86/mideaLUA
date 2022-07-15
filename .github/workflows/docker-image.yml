@@ -81,12 +81,12 @@ jobs:
         id: meta
         uses: docker/metadata-action@v2
         with:
-          images: blindlight/mideaLUA
+          images: blindlight/midealua
           
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
-          tags: blindlight/mideaLUA:latest
+          tags: blindlight/midealua:latest
           labels: ${{ steps.meta.outputs.labels }}
