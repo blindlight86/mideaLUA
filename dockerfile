@@ -16,7 +16,7 @@ RUN ./configure && make && sudo make install
 WORKDIR "/"
 RUN pip3 install flask
 RUN luarocks install --global lua-cjson 2.1.0-1
-RUN luarocks install --global bit32
+# RUN luarocks install --global bit32
 
 EXPOSE 5000
 
