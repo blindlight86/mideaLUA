@@ -14,7 +14,7 @@ RUN tar zxpf luarocks-3.9.1.tar.gz
 WORKDIR "/luarocks-3.9.1"
 RUN ./configure && make && sudo make install
 WORKDIR "/"
-RUN pip3 install flask
+RUN pip3 install flask --break-system-packages
 RUN luarocks install --global lua-cjson 2.1.0-1
 # RUN luarocks install --global bit32
 
